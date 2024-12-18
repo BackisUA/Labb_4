@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Labb_4
 {
-    internal struct Hair
+    public struct Hair
     {
-
+        public string HairColor;
+        public string HairLenght;
     }
 }

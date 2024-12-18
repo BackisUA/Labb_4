@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            
+            Person person = new Person();
+            DateTime yearOfBirth = new DateTime();//userinput?
+
         }
     }
 }
