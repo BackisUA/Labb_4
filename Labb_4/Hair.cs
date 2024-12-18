@@ -9,6 +9,6 @@ namespace Labb_4
     public struct Hair
     {
         public string HairColor;
-        public string HairLenght;
+        public string HairLength;
     }
 }

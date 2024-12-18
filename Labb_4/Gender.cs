@@ -8,8 +8,8 @@ namespace Labb_4
 {
     public enum Gender
     {
-        Man,
-        Woman,
-        NoBinary
+        Male,
+        Female,
+        NonBinary
     }
 }
