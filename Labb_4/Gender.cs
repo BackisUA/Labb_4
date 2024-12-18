@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Labb_4
 {
-    internal class Person
+    public enum Gender
     {
-        //Properties
-        public string eyeColor {get; set; }
-        public int birthYear { get; set; }
+        Man,
+        Woman,
+        NoBinary
     }
 }
