@@ -13,15 +13,27 @@ namespace Labb_4
         public int birthYear { get; set; }
         public Gender gender { get; set; }
         public Hair hair { get; set; }
-        public string HairColor;
-        public string HairLength;
+        public string HairColor {  get; set; }
+        public string HairLength {  get; set; }
     }
 
     //Constructor
-    public Person(string eyeColor, int birthYear, Gender gender)
+    public Person(string eyeColor, int birthYear, Gender gender, Hair hair, HairColor hairColor, HairLength hairLength)
     {
         EyeColor = eyeColor;
         BirthYear = birthYear;
+        Gender = gender;
+        Hair = hair;
+        HairColor = hairColor;
+        HairLength = hairLength;
+    }
+    public override ToString()
+    {
+        return $"Kön: {Gender}" +
+            $"\nFödelseår: {BirthYear}" +
+            $"\nÖgonfärg: {EyeColor}" +
+            $"\nHårfärg: {HairColor}" +
+            $"\nHårlängd: {HairLength}"
 
     }
 }
