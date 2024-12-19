@@ -6,6 +6,10 @@
         
         static void Main(string[] args)
         {
+            List<Person> myPerson = new List<Person>();
+
+            myPerson.Add(person1);
+
             string person =
             Name name = new Name { FirstName= "Linus", LastName="Backlund"},
             Gender personGender = Gender.Male;
