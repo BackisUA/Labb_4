@@ -6,7 +6,8 @@
         
         static void Main(string[] args)
         {
-            string person = "Linus Backlund"
+            string person =
+            Name name = new Name { FirstName= "Linus", LastName="Backlund"},
             Gender personGender = Gender.Male;
             Console.WriteLine(personGender.ToString());
 
