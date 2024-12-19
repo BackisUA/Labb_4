@@ -1,4 +1,6 @@
-﻿namespace Labb_4
+﻿using System.Xml.Linq;
+
+namespace Labb_4
 {
 
     internal class Program
@@ -8,16 +10,21 @@
         {
             List<Person> myPerson = new List<Person>();
 
+       
+
+            Person person1= new Person(Name name = new Name { FirstName = "Linus", LastName = "Backlund" },
+                Gender personGender = Gender.Male,);
+
+            Person person2 = new Person(Name name = new Name { FirstName = "Linus", LastName = "Backlund" },
+                Gender personGender = Gender.Male,);
+
+            Person person3 = new Person(Name name = new Name { FirstName = "Linus", LastName = "Backlund" },
+                Gender personGender = Gender.Male,);
+
+
             myPerson.Add(person1);
-
-            string person =
-            Name name = new Name { FirstName= "Linus", LastName="Backlund"},
-            Gender personGender = Gender.Male;
-            Console.WriteLine(personGender.ToString());
-
-            Person person = new Person();
-            DateTime yearOfBirth = new DateTime();//userinput?
-
+            myPerson.Add(person2);
+            myPerson.Add(person3);
         }
     }
 }
