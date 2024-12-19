@@ -10,5 +10,10 @@ namespace Labb_4
     {
         public string HairColor {  get; set; }
         public string HairLength { get; set; }
+
+        public override string ToString()
+        {
+            return $"{HairColor}, {HairLength}";
+        }
     }
 }

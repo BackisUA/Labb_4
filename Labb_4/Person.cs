@@ -9,6 +9,7 @@ namespace Labb_4
     internal class Person
     {
         //Properties
+        public string Name { get; set; }
         public string EyeColor { get; set; }
         public DateTime YearOfBirth { get; set; }
         public Gender PersonGender { get; set; }
@@ -17,8 +18,9 @@ namespace Labb_4
 
 
         //Constructor
-        public Person(string eyeColor, DateTime yearOfBirth, Gender gender, Hair hair)
+        public Person(string name, string eyeColor, DateTime yearOfBirth, Gender gender, Hair hair)
         {
+            Name = name;
             EyeColor = eyeColor;
             YearOfBirth = yearOfBirth;
             PersonGender = gender;
@@ -26,11 +28,11 @@ namespace Labb_4
         }
         public override string ToString()
         {
-            return $"Kön: {PersonGender}" +
+            return $"\nNamn: {Name}" +
+                $"\nKön: {PersonGender}" +
                 $"\nFödelseår: {YearOfBirth}" +
                 $"\nÖgonfärg: {EyeColor}" + 
-                $"\nHår: {PersonHair}"
-               ;
+                $"\nHår: {PersonHair}";
 
         }
     }

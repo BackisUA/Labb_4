@@ -6,16 +6,16 @@
         
         static void Main(string[] args)
         {
-            string personName = "Linus Backlund";
-            Hair hair = new Hair { HairColor= "Blond", HairLength = "Kort"};
+            string name = "Linus Backlund";
+            Hair hairColor = new Hair { HairColor= "Blond", HairLength = "Kort"};
             Gender personGender = Gender.Male;
             string eyeColor = "Blå";
-
             DateTime yearOfBirth = new DateTime(1997,11,23);
 
-            Person person = new Person(eyeColor,yearOfBirth,personGender,hair);
-            //userinput?
-            Console.WriteLine(person.ToString());
+            Person person1 = new Person(name,eyeColor,yearOfBirth,personGender,hairColor);
+            Console.WriteLine(person1.ToString());
+
+           
             
         }
     }
