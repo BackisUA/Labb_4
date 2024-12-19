@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Labb_4
+﻿namespace Labb_4
 {
-    internal class Person
+    public class Person
     {
         //Properties
-        public string eyeColor {get; private set; }
-        public int birthYear { get; set; }
+        public string Name { get; set; }
+        public string EyeColor { get; set; }
+        public DateTime BirthYear { get; set; }
         public Gender gender { get; set; }
         public Hair hair { get; set; }
-        public string HairColor;
-        public string HairLength;
-    }
+    
 
     //Constructor
-    public Person(string eyeColor, int birthYear, Gender gender)
-    {
-        EyeColor = eyeColor;
-        BirthYear = birthYear;
+    public Person(string name, Gender gender, Hair hair, DateTime birthYear, string eyeColor)
+        {
+            Name = name;
+            EyeColor = eyeColor;
+            BirthYear = birthYear;
 
-    }
+        }
+        public override string ToString()
+        {
+            return $"Name: {Name}\nBirthday: {BirthYear:yyyy-mm-dd}\nEyecolor: {EyeColor}";
+        }
+    } 
 }
+

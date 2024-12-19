@@ -1,30 +1,29 @@
-﻿using System.Xml.Linq;
+﻿using System.Threading.Channels;
 
 namespace Labb_4
 {
 
     internal class Program
     {
-        
+
         static void Main(string[] args)
         {
             List<Person> myPerson = new List<Person>();
 
-       
+            myPerson.Add(new Person("Linus Backlund",
+                Gender.Male,
+                new Hair("Kort", "Brunt"),
+                new DateTime(2002, 07, 05),
+                "Hazel"));
 
-            Person person1= new Person(Name name = new Name { FirstName = "Linus", LastName = "Backlund" },
-                Gender personGender = Gender.Male,);
-
-            Person person2 = new Person(Name name = new Name { FirstName = "Linus", LastName = "Backlund" },
-                Gender personGender = Gender.Male,);
-
-            Person person3 = new Person(Name name = new Name { FirstName = "Linus", LastName = "Backlund" },
-                Gender personGender = Gender.Male,);
-
-
-            myPerson.Add(person1);
-            myPerson.Add(person2);
-            myPerson.Add(person3);
+            foreach (var person in myPerson)
+            {
+                Console.WriteLine(person.ToString());
+                Console.WriteLine("******************************");
+            }
         }
+
+
+        
     }
 }
