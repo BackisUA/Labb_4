@@ -8,6 +8,8 @@ namespace Labb_4
 {
     internal enum Gender
     {
-
+        Male,
+        Female,
+        NonBinary
     }
 }
