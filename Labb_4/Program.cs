@@ -6,13 +6,17 @@
         
         static void Main(string[] args)
         {
-            string person = "Linus Backlund"
+            string personName = "Linus Backlund";
+            Hair hair = new Hair { HairColor= "Blond", HairLength = "Kort"};
             Gender personGender = Gender.Male;
-            Console.WriteLine(personGender.ToString());
+            string eyeColor = "Blå";
 
-            Person person = new Person();
-            DateTime yearOfBirth = new DateTime();//userinput?
+            DateTime yearOfBirth = new DateTime(1997,11,23);
 
+            Person person = new Person(eyeColor,yearOfBirth,personGender,hair);
+            //userinput?
+            Console.WriteLine(person.ToString());
+            
         }
     }
 }

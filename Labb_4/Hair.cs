@@ -8,7 +8,7 @@ namespace Labb_4
 {
     public struct Hair
     {
-        public string HairColor;
-        public string HairLength;
+        public string HairColor {  get; set; }
+        public string HairLength { get; set; }
     }
 }
