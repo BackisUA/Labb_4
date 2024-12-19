@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return $"Hairlength: {HairLength}, Haircolor: {HairColor}";
+            return $"Haircolor: {HairColor}, Hairlength: {HairLength}";
         }
 
     }
