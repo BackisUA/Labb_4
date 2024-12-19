@@ -8,10 +8,10 @@
         public DateTime BirthYear { get; set; }
         public Gender getGender { get; set; }
         public Hair getHair { get; set; }
-    
 
-    //Constructor
-    public Person(string name, Gender gender, Hair hair, DateTime birthYear, string eyeColor)
+
+        //Constructor
+        public Person(string name, Gender gender, Hair hair, DateTime birthYear, string eyeColor)
         {
             Name = name;
             EyeColor = eyeColor;
@@ -22,8 +22,8 @@
         }
         public override string ToString()
         {
-            return $"Name: {Name}\nBirthday: {BirthYear:yyyy-MM-dd}\nEyecolor: {EyeColor}\nGender: {getGender}\n{getHair}" ;
+            return $"Name: {Name}\nBirthday: {BirthYear:yyyy-MM-dd}\nEyecolor: {EyeColor}\nGender: {getGender}\n{getHair}";
         }
-    } 
+    }
 }
 
