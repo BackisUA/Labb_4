@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Labb_4
 {
-    public enum Gender
+    internal enum Gender
     {
-        Male,
-        Female,
-        NonBinary
+
     }
 }
