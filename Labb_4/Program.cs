@@ -50,13 +50,14 @@
                                 Console.Write("Haircolor: ");
                                 string HairColor=Console.ReadLine();
 
-                                Console.Write("Birthday: ");
+                                Console.Write("Birthday in YYYY,MM,DD: ");
                                 DateTime BirthYear =DateTime.Parse(Console.ReadLine());
 
                                 Console.Write("Eyecolor: ");
                                 string EyeColor =Console.ReadLine();
 
-                                myPerson.Add(new Person(name,
+                                myPerson.Add(new Person(
+                                    name,
                                     gender,
                                     new Hair(HairLenght, HairColor),
                                     BirthYear,
