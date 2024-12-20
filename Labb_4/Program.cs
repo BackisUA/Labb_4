@@ -7,22 +7,15 @@
         static void Main(string[] args)
         {
             List<Person> myPerson = new List<Person>();
-            //välkomstmeddelande
             Console.WriteLine("***************************************************************************\n" + "Hello and welcome to the TemperatureCalculator!\n" + "***************************************************************************\n\n");
 
             bool bExit = false;
             while (bExit == false)
             {
-                Console.Clear();//rensa consolen  
                 Console.Write($"***************************************************************************\n" +
                     $"Choose an option from the menu:\n" +
-                    $"1. Add person\n" +
-                    $"2. Search for person\n" +
-                    $"3. xxx\n" +
-                    $"4. xxx\n" +
-                    $"5. xxx\n" +
-                    $"6. xxx\n" +
-                    $"7. Exit the program\n" +
+                    $"1. Add person\n" +       
+                    $"2. Exit the program\n" +
                     $"***************************************************************************\n" +
                     $"Put your input here:");
                 string UserInputMainMenu = Console.ReadLine();
@@ -31,71 +24,87 @@
                 {
                     case "1":
                         {
-
-                            Console.WriteLine("How many people do u want to add");
-                            int sum=int.Parse(Console.ReadLine());
-                            
-                            for (int i = 0; i < sum ; i++)
+                            int sum = 0;
+                            while (true)
                             {
-                                Console.WriteLine($"Persons{i+1}:");
+                                Console.WriteLine("How many people do u want to add");
+                                string inputPerson = Console.ReadLine();
+                                if (int.TryParse(inputPerson, out sum) && sum > 0)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Invlaid input, Put a posetiv number");
+                                }
+                            }
+                            for (int i = 0; i < sum; i++)
+                            {
+                                Console.WriteLine($"Person: {i + 1}");
                                 Console.Write("Name:");
-                                string name=Console.ReadLine();
+                                string name = Console.ReadLine();
 
-                                Console.Write("Gender) 1.Woman, 2.Man, 3.Non binary \nInput: ");
-                                Gender gender=(Gender)int.Parse(Console.ReadLine());
+                                Gender gender;
+                                while (true)
+                                {
+                                    Console.Write("Gender) 1.Man, 2.Woman, 3.Non binary \nInput: ");
+                                    string genderInput = Console.ReadLine();
+                                    if (int.TryParse(genderInput, out int genderValue) && Enum.IsDefined(typeof(Gender), genderValue))
+                                    {
+                                        gender = (Gender)genderValue;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Invalid input try a number between 1-3");
+                                    }
+                                }
 
                                 Console.Write("Hairlenght: ");
-                                string HairLenght=Console.ReadLine();
+                                string HairLenght = Console.ReadLine();
 
                                 Console.Write("Haircolor: ");
-                                string HairColor=Console.ReadLine();
+                                string HairColor = Console.ReadLine();
 
-                                Console.Write("Birthday in YYYY,MM,DD: ");
-                                DateTime BirthYear =DateTime.Parse(Console.ReadLine());
+                                DateTime birthYear;
+                                while (true)
+                                {
+                                    Console.Write("Birthday in YYYY,MM,DD: ");
+                                    string dateInput = Console.ReadLine();
+                                    if (DateTime.TryParse(dateInput, out birthYear))
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Invalid Value! Enter a valid date in the form of YYYY,MM,DD");
+                                    }
+                                }
 
                                 Console.Write("Eyecolor: ");
-                                string EyeColor =Console.ReadLine();
+                                string EyeColor = Console.ReadLine();
 
                                 myPerson.Add(new Person(
                                     name,
                                     gender,
                                     new Hair(HairLenght, HairColor),
-                                    BirthYear,
+                                    birthYear,
                                     EyeColor));
                                 Console.WriteLine("*******************************************");
+                                Console.Clear();
 
                             }
 
-
-
-
-                            //myPerson.Add(new Person("Disa Dagg",
-                            //    Gender.NonBinary,
-                            //    new Hair("Blue", "Short"),
-                            //    new DateTime(1939, 02, 28),
-                            //    "Black"));
-
-                            //myPerson.Add(new Person("Adam Adamsson",
-                            //    Gender.Male,
-                            //    new Hair("Blonde", "Long"),
-                            //    new DateTime(1997, 1, 1),
-                            //    "Blå"));
-
-                            //myPerson.Add(new Person("Lena PH",
-                            //    Gender.Female,
-                            //    new Hair("Black", "long"),
-                            //    new DateTime(1966, 1, 19),
-                            //    "Blå"));
-
                             foreach (var person in myPerson)
                             {
-                                Console.WriteLine(person.ToString());
-                                Console.WriteLine("*******************************************");
+                                Console.WriteLine("*******************************************\n"+
+                                $"{person.ToString()}\n" +
+                                "*******************************************");
                             }
                             return;
                         }
 
-                    case "7":
+                    case "2":
                         {
                             Console.WriteLine("Thank you for using this program, hope to see you again soon\n***************************************************************************");
                             bExit = true;//flagga för att lämna aplikationen 
