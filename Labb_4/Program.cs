@@ -1,4 +1,6 @@
-﻿namespace Labb_4
+﻿using System.Runtime.InteropServices;
+
+namespace Labb_4
 {
 
     internal class Program
@@ -8,6 +10,16 @@
         {
             List<Person> myPerson = new List<Person>();
             Console.WriteLine("***************************************************************************\n" + "Hello and welcome to the TemperatureCalculator!\n" + "***************************************************************************\n\n");
+            const string CorrectPassword = "1234";
+            int maxAttempts = 3;
+            int attempts = 0; 
+            bool authenicated=false;
+
+            while(attempts < maxAttempts)
+            {
+                Console.Write("Enter your password");
+                string inputPassword = ReadPassword();
+            }
 
             bool bExit = false;
             while (bExit == false)
