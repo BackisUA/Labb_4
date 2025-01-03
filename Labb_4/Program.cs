@@ -33,7 +33,7 @@
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Invlaid input, Put a posetiv number");
+                                    Console.WriteLine("Invalid input, Put a positive number");
                                 }
                             }
                             for (int i = 0; i < sum; i++)
@@ -59,7 +59,7 @@
                                     }
                                 }
 
-                                Console.Write("Hairlenght: ");
+                                Console.Write("Hairlength: ");
                                 string HairLenght = Console.ReadLine();
 
                                 Console.Write("Haircolor: ");
@@ -76,7 +76,7 @@
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Invalid Value! Enter a valid date in the form of YYYY,MM,DD");
+                                        Console.WriteLine("Invalid Value! Enter a valid date in the form of YYYY,MM,DD: ");
                                     }
                                 }
 
