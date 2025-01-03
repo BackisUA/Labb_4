@@ -5,7 +5,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("***************************************************************************\n" + "Hello and welcome to the creeperprogram!\n" + "***************************************************************************\n\n");
+            Console.WriteLine("***************************************************************************\n" + "Hello and welcome to the Eye!\n" + "***************************************************************************\n\n");
             List<Person> myPerson = new List<Person>();
             bool bExit = false;
             while (bExit == false)
