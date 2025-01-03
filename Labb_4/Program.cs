@@ -1,32 +1,18 @@
-﻿using System.Runtime.InteropServices;
-
-namespace Labb_4
+﻿namespace Labb_4
 {
 
     internal class Program
     {
-
         static void Main(string[] args)
         {
+            Console.WriteLine("***************************************************************************\n" + "Hello and welcome to the creeperprogram!\n" + "***************************************************************************\n\n");
             List<Person> myPerson = new List<Person>();
-            Console.WriteLine("***************************************************************************\n" + "Hello and welcome to the TemperatureCalculator!\n" + "***************************************************************************\n\n");
-            const string CorrectPassword = "1234";
-            int maxAttempts = 3;
-            int attempts = 0; 
-            bool authenicated=false;
-
-            while(attempts < maxAttempts)
-            {
-                Console.Write("Enter your password");
-                string inputPassword = ReadPassword();
-            }
-
             bool bExit = false;
             while (bExit == false)
             {
                 Console.Write($"***************************************************************************\n" +
                     $"Choose an option from the menu:\n" +
-                    $"1. Add person\n" +       
+                    $"1. Add person\n" +
                     $"2. Exit the program\n" +
                     $"***************************************************************************\n" +
                     $"Put your input here:");
@@ -53,6 +39,7 @@ namespace Labb_4
                             for (int i = 0; i < sum; i++)
                             {
                                 Console.WriteLine($"Person: {i + 1}");
+                                
                                 Console.Write("Name:");
                                 string name = Console.ReadLine();
 
@@ -104,12 +91,11 @@ namespace Labb_4
                                     EyeColor));
                                 Console.WriteLine("*******************************************");
                                 Console.Clear();
-
                             }
 
                             foreach (var person in myPerson)
                             {
-                                Console.WriteLine("*******************************************\n"+
+                                Console.WriteLine("*******************************************\n" +
                                 $"{person.ToString()}\n" +
                                 "*******************************************");
                             }
@@ -123,11 +109,11 @@ namespace Labb_4
                             break;
                         }
                 }
-
-
             }
-
         }
-
     }
 }
+        
+
+    
+
