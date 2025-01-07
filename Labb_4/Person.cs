@@ -6,8 +6,8 @@
         public string Name { get; set; }
         public string EyeColor { get; set; }
         public DateTime BirthYear { get; set; }
-        public Gender getGender { get; set; }
-        public Hair getHair { get; set; }
+        public Gender Gender { get; set; }
+        public Hair Hair { get; set; }
 
 
         //Constructor
@@ -16,13 +16,13 @@
             Name = name;
             EyeColor = eyeColor;
             BirthYear = birthYear;
-            getGender = gender;
-            getHair = hair;
+            Gender = gender;
+            Hair = hair;
 
         }
         public override string ToString()
         {
-            return $"Name: {Name}\nBirthday: {BirthYear:yyyy-MM-dd}\nEyecolor: {EyeColor}\nGender: {getGender}\n{getHair}";
+            return $"Name: {Name}\nBirthday: {BirthYear:yyyy-MM-dd}\nEyecolor: {EyeColor}\nGender: {Gender}\n{Hair}";
         }
     }
 }
