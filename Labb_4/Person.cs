@@ -1,39 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Labb_4
+﻿namespace Labb_4
 {
-    internal class Person
+    public class Person
     {
-        //Properties
+        //Klass för att hålla koll på personens namn, ögonfärg, födelsedatum, kön och hår
         public string Name { get; set; }
         public string EyeColor { get; set; }
-        public DateTime YearOfBirth { get; set; }
-        public Gender PersonGender { get; set; }
-        public Hair PersonHair { get; set; }
+        public DateTime BirthYear { get; set; }
+        public Gender Gender { get; set; }
+        public Hair Hair { get; set; }
 
-
-
-        //Constructor
-        public Person(string name, string eyeColor, DateTime yearOfBirth, Gender gender, Hair hair)
+        //Konstruktor för att skapa en instans av Person
+        public Person(string name, Gender gender, Hair hair, DateTime birthYear, string eyeColor)
         {
             Name = name;
             EyeColor = eyeColor;
-            YearOfBirth = yearOfBirth;
-            PersonGender = gender;
-            PersonHair = hair;
+            BirthYear = birthYear;
+            Gender = gender;
+            Hair = hair;
+
         }
+
+        //Metod som returnerar en sträng med information om personen
         public override string ToString()
         {
-            return $"\nNamn: {Name}" +
-                $"\nKön: {PersonGender}" +
-                $"\nFödelseår: {YearOfBirth}" +
-                $"\nÖgonfärg: {EyeColor}" + 
-                $"\nHår: {PersonHair}";
-
+            return $"Name: {Name}\nBirthday: {BirthYear:yyyy-MM-dd}\nEyecolor: {EyeColor}\nGender: {Gender}\n{Hair}";
         }
     }
 }
+

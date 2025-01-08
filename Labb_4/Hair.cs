@@ -1,19 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Labb_4
+﻿namespace Labb_4
 {
     public struct Hair
     {
-        public string HairColor {  get; set; }
+        //Struct för att hålla koll på hårfärg och hårlängd
+        public string HairColor { get; set; }
         public string HairLength { get; set; }
 
+        //Konstruktor för att skapa en instans av Hair
+        public Hair(string hairColor, string hairLength)
+        {
+            HairLength = hairLength;
+            HairColor = hairColor;
+        }
+
+        //Metod som returnerar en sträng med information om håret
         public override string ToString()
         {
-            return $"{HairColor}, {HairLength}";
+            return $"Haircolor: {HairColor}, Hairlength: {HairLength}";
         }
+
     }
+
+
 }

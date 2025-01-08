@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Labb_4
+﻿namespace Labb_4
 {
     public enum Gender
     {
-        Male,
-        Female,
-        NonBinary
+        Male = 1,
+        Female = 2,
+        NonBinary = 3
     }
 }
